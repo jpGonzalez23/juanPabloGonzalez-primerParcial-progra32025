@@ -103,6 +103,7 @@ let carrito = [];
 
 /**
  * En la siguiente funcion lo que hice fue recorrer el array de frutas y mostrarlas en el HTML de manera dinamica utilizando un forEach
+ * mostrando el nombre, precio y una imagen de cada fruta
  * @param {Array} array 
  */
 function mostrarFrutas(array) {
@@ -289,20 +290,22 @@ document.getElementById("boton-limpiar").addEventListener('click', () => {
 
 /**
  * Eventos de click para los botones de ordenar.
- * Llama a la funcion mostrarFrutas() con el array de frutas ordenado.
+ * Llama a la funcion mostrarFrutas() con el array de frutas ordenado. 
+ * Utilizando el metodo sort()
  */
 document.getElementById("boton-ordenar-nombre"). addEventListener('click', () => {
-    let ordenarNombre = [...arrayFrutas].sort((a, b) => a.nombre.localeCompare(b.nombre));
+    let ordenarNombre = arrayFrutas.sort((a, b) => a.nombre.localeCompare(b.nombre));
     mostrarFrutas(ordenarNombre);
 });
 
 
 /**
  * Eventos de click para los botones de ordenar.
- * Llama a la funcion mostrarFrutas() con el array de frutas ordenado.
+ * Llama a la funcion mostrarFrutas() con el array de frutas ordenado. 
+ * Utilizando el metodo sort()
  */
 document.getElementById("boton-ordenar-precio"). addEventListener('click', () => {
-    let ordenarPrecio = [...arrayFrutas].sort((a, b) => a.precio - b.precio);
+    let ordenarPrecio = arrayFrutas.sort((a, b) => a.precio - b.precio);
     mostrarFrutas(ordenarPrecio);
 });
 

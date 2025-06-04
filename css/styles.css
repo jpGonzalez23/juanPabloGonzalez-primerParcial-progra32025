@@ -270,6 +270,10 @@ Seccion productos
     /* border-top: 1px solid #ccc; */
 }
 
+
+/*=============
+    Botones ordenar
+=============*/
 .boton-ordenar {
     flex: 1;
     padding: 10px;
