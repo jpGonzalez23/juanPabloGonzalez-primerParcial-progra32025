@@ -268,6 +268,11 @@ function actualizarTotalCarrito() {
     totalCarrito.textContent = `Total: $${total}`;
 }
 
+/**
+ * Evento de click para el boton de limpiar carrito.
+ * Muestra un mensaje de confirmacion antes de vaciar el carrito.
+ * Si el carrito esta vacio, muestra un mensaje de alerta.
+ */
 document.getElementById("boton-limpiar").addEventListener('click', () => {
     if (carrito.length === 0) {
         alert("Carrito vacio");
@@ -281,11 +286,21 @@ document.getElementById("boton-limpiar").addEventListener('click', () => {
     }
 });
 
+
+/**
+ * Eventos de click para los botones de ordenar.
+ * Llama a la funcion mostrarFrutas() con el array de frutas ordenado.
+ */
 document.getElementById("boton-ordenar-nombre"). addEventListener('click', () => {
     let ordenarNombre = [...arrayFrutas].sort((a, b) => a.nombre.localeCompare(b.nombre));
     mostrarFrutas(ordenarNombre);
 });
 
+
+/**
+ * Eventos de click para los botones de ordenar.
+ * Llama a la funcion mostrarFrutas() con el array de frutas ordenado.
+ */
 document.getElementById("boton-ordenar-precio"). addEventListener('click', () => {
     let ordenarPrecio = [...arrayFrutas].sort((a, b) => a.precio - b.precio);
     mostrarFrutas(ordenarPrecio);
